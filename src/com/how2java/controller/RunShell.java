@@ -246,7 +246,7 @@ public class RunShell {
 	public static void opentcpPort_IPTABLESL14(String ip, String port) {
 		try {
 //			String bashCommand = "iptables -I INPUT -s "+ip+" -p tcp -m tcp --dport "+port+" -j ACCEPT";
-			String bashCommand = "iptables -I INPUT 14 -i eth0 -s "+ip+" -p tcp -m tcp --dport "+port+" -j ACCEPT";
+			String bashCommand = "iptables -I INPUT 1 -i eth0 -s "+ip+" -p tcp -m tcp --dport "+port+" -j ACCEPT";
 			
 //	            String bashCommand = "kill -9" + ip;
 			
@@ -277,7 +277,7 @@ public class RunShell {
 	}
 	public static void openudpPort_IPTABLESL14(String ip, String port) {
 		try {
-			String bashCommand = "iptables -I INPUT 14 -i eth0 -s "+ip+" -p udp -m udp --dport "+port+" -j ACCEPT";
+			String bashCommand = "iptables -I INPUT 1 -i eth0 -s "+ip+" -p udp -m udp --dport "+port+" -j ACCEPT";
 //	            String bashCommand = "kill -9" + ip;
 			
 			System.out.println(bashCommand);
