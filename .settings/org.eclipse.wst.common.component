@@ -2,6 +2,7 @@
     <wb-module deploy-name="helloip">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/war"/>
         <property name="java-output-path" value="/helloip/WebRoot/WEB-INF/classes"/>
         <property name="context-root" value="helloip"/>
     </wb-module>
