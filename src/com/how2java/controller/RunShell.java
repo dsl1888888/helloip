@@ -243,6 +243,68 @@ public class RunShell {
 		}
 	}
 	
+	public static void opentcpPort_IPTABLESL14(String ip, String port) {
+		try {
+//			String bashCommand = "iptables -I INPUT -s "+ip+" -p tcp -m tcp --dport "+port+" -j ACCEPT";
+			String bashCommand = "iptables -I INPUT 4 -i eth0 -s "+ip+" -p tcp -m tcp --dport "+port+" -j ACCEPT";
+			
+//	            String bashCommand = "kill -9" + ip;
+			
+			System.out.println(bashCommand);
+			Runtime runtime = Runtime.getRuntime();
+			Process pro = runtime.exec(bashCommand);
+			int status = pro.waitFor();
+			if (status != 0) {
+				System.out.println("Failed to call shell's command ");
+			}
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+			StringBuffer strbr = new StringBuffer();
+			String line;
+			while ((line = br.readLine()) != null) {
+				strbr.append(line).append("\n");
+			}
+			
+			String result = strbr.toString();
+			System.out.println(result);
+			
+		} catch (IOException ec) {
+			ec.printStackTrace();
+		} catch (InterruptedException ex) {
+			ex.printStackTrace();
+			
+		}
+	}
+	public static void openudpPort_IPTABLESL14(String ip, String port) {
+		try {
+			String bashCommand = "iptables -I INPUT 4 -i eth0 -s "+ip+" -p udp -m udp --dport "+port+" -j ACCEPT";
+//	            String bashCommand = "kill -9" + ip;
+			
+			System.out.println(bashCommand);
+			Runtime runtime = Runtime.getRuntime();
+			Process pro = runtime.exec(bashCommand);
+			int status = pro.waitFor();
+			if (status != 0) {
+				System.out.println("Failed to call shell's command ");
+			}
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+			StringBuffer strbr = new StringBuffer();
+			String line;
+			while ((line = br.readLine()) != null) {
+				strbr.append(line).append("\n");
+			}
+			
+			String result = strbr.toString();
+			System.out.println(result);
+			
+		} catch (IOException ec) {
+			ec.printStackTrace();
+		} catch (InterruptedException ex) {
+			ex.printStackTrace();
+			
+		}
+	}
 	
 	
 	public static void opentcpPort(String ip, String port) {
