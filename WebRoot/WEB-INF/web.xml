@@ -37,7 +37,7 @@
 
   
 <welcome-file-list>
-		<welcome-file>hello.html</welcome-file>
+		<welcome-file>success.html</welcome-file>
 	</welcome-file-list>
     
 </web-app>
