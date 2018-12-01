@@ -31,11 +31,11 @@
 			$(function() {
 				$("#getweb").click(function() {
 					console.log("getweb")
-					javascript: window.location.href = getRootPath_web()+"/indexddddddddddd.html"
+					javascript: window.location.href = getRootPath_web()+"/index555555555555.html"
 				})
 				$("#getweb1").click(function() {
 					console.log("getweb1")
-					javascript: window.location.href = getRootPath_web()+"/indexddddddddddd.html"
+					javascript: window.location.href = getRootPath_web()+"/index555555555555.html"
 				})
 			})
 		</script>
@@ -71,6 +71,7 @@
  <p><h5>网游加速器 http://t.cn/ELdW45Y</h5></p>
   <p><h5>多开 http://t.cn/EZL84bl</h5></p>
  <p><h5>屏幕亮度调节 http://t.cn/ELdWThL</h5></p>
+  <p>填值:<input type="text" id="asdasdval"/><button id='asdasd'>按钮</button></p>
 	</body>
 
 
@@ -165,6 +166,27 @@ console.log(DateMinus(aaaaa))
 			})
     </script>
 
+  <script type="text/javascript">   
+	$(function() {
+// 		alert('aaaaaaas')
+ 
 
+$("#asdasd").click(function() {
+	console.log("asdasd")
+	
+	var asdasdval=$("#asdasdval").val()
+	
+	
+	console.log(asdasdval)
+	 if(typeof urlip == "undefined" || urlip == null || urlip == ""){
+		 javascript: window.location.href = getRootPath_web()+"/index555555555555.html"
+	    }else{
+	    	javascript: window.location.href = getRootPath_web()+"/index555555555555.html?ip="+asdasdval
+	    }
+	
+})
+ 
 
+	});
+  </script>
 </html>
