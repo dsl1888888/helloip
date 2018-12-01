@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript">
+			function getRootPath_web() {
+				//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+				var curWwwPath = window.document.location.href;
+				//获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
+				var pathName = window.document.location.pathname;
+				var pos = curWwwPath.indexOf(pathName);
+				//获取主机地址，如： http://localhost:8083
+				var localhostPaht = curWwwPath.substring(0, pos);
+				//获取带"/"的项目名，如：/uimcardprj
+				var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+				return(localhostPaht + projectName);
+			}
+		</script>
+		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$("#getweb").click(function() {
+					console.log("getweb")
+					javascript: window.location.href = getRootPath_web()+"/indexccccccccccccccccccccccccc.html"
+				})
+				$("#getweb1").click(function() {
+					console.log("getweb1")
+					javascript: window.location.href = getRootPath_web()+"/indexccccccccccccccccccccccccc.html"
+				})
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<p>恭喜你</p>
+		<p>成功了。。</p>
+		<p>请关闭该网页</p>
+		<p>
+			<a href="javascript:void(0)" id="getweb">获取新网络</a>
+		</p>
+		<p>-------------------------------------</p>
+		<p>congratulation</p>
+		<p>Success</p>
+		<p>please close the web site</p>
+
+		<p>
+			<a href="javascript:void(0)" id="getweb1">get new network</a>
+		</p>
+		<p>-------------------------------------</p>
+
+	</body>
+
+</html>
