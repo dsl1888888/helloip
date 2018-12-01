@@ -46,7 +46,34 @@
 				
 				console.log(urlip)
 				 if(typeof urlip == "undefined" || urlip == null || urlip == ""){
-				     
+					 var url="http://ip-api.com/json"
+//			 				var url="https://ipapi.co/json/"
+							//var url = "https://geoip.nekudo.com/api"
+							$.ajax({
+								type: "get",
+								url: url,
+								async: false,
+								success: function(data) {
+									console.log(JSON.stringify(data, null, 2));
+
+//			 						var ip = data.ip
+//			 						console.log(ip)
+			var ip = data.query
+									console.log(ip)
+									var url1 = getRootPath_web()+"/helloip5"+"?ip="+ip
+									$.ajax({
+										type: "get",
+										url: url1,
+										async: false,
+										success: function(data) {
+											
+											console.log(data)
+
+											javascript:window.location.href=getRootPath_web()+"/success.html"
+										}
+									});
+								}
+							});
 				    }else{
 				    	
 				    	$.ajax({
@@ -79,34 +106,7 @@
 				
 				
 
-				 var url="http://ip-api.com/json"
-// 				var url="https://ipapi.co/json/"
-				//var url = "https://geoip.nekudo.com/api"
-				$.ajax({
-					type: "get",
-					url: url,
-					async: false,
-					success: function(data) {
-						console.log(JSON.stringify(data, null, 2));
-
-// 						var ip = data.ip
-// 						console.log(ip)
-var ip = data.query
-						console.log(ip)
-						var url1 = getRootPath_web()+"/helloip5"+"?ip="+ip
-						$.ajax({
-							type: "get",
-							url: url1,
-							async: false,
-							success: function(data) {
-								
-								console.log(data)
-
-								javascript:window.location.href=getRootPath_web()+"/success.html"
-							}
-						});
-					}
-				});
+				
 			});
 		</script>
 

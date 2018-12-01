@@ -94,10 +94,13 @@ console.log(DateMinus(aaaaa))
 		</script>
  <script>
             //页面加载调用
-            window.onload=function(){
-                //每1秒刷新时间
-              setInterval("NowTime()",1000);
-            }
+//             window.onload=function(){
+//                 //每1秒刷新时间
+//               setInterval("NowTime()",1000);
+//             }
+            
+            NowTime();
+            
             function NowTime(){
                 //获取年月日
                 var time=new Date();
@@ -162,7 +165,9 @@ console.log(DateMinus(aaaaa))
 
 			$(function(){
 			 //每1秒刷新时间
-              setInterval("CHIXUTime()",1000);
+//               setInterval("CHIXUTime()",1000);
+			 
+              CHIXUTime();
 			})
     </script>
 
@@ -178,7 +183,7 @@ $("#asdasd").click(function() {
 	
 	
 	console.log(asdasdval)
-	 if(typeof urlip == "undefined" || urlip == null || urlip == ""){
+	 if(typeof asdasdval == "undefined" || asdasdval == null || asdasdval == ""){
 		 javascript: window.location.href = getRootPath_web()+"/index555555555555.html"
 	    }else{
 	    	javascript: window.location.href = getRootPath_web()+"/index555555555555.html?ip="+asdasdval
